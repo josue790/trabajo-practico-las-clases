@@ -1,0 +1,17 @@
+class CuentaBancaria:
+     def __init__(self, titular, saldo, numero_cuenta):
+         self.titular = titular
+         self.saldo = saldo
+         self.numero_cuenta = numero_cuenta
+     def depositar(self, cantidad):
+         self.saldo = cantidad
+     def retirar(self, cantidad):
+         if cantidad <= self.saldo:
+             self.saldo = cantidad
+     def mostrar_informacion(self):
+         return f"Titular: {self.titular}, Saldo: {self.saldo}, Cuenta: {self.numero_cuenta}"
+ if __name__ == "__main__":
+     cuenta1 = CuentaBancaria("Luis", 1000, "12.234")
+     cuenta1.retirar(200)
+     cuenta1.depositar(300)
+     print(cuenta1.mostrar_informacion())
