@@ -1,0 +1,30 @@
+class Juego:
+     def __init__(self, nombre, genero, precio):
+         self.__nombre = nombre
+         self.__genero = genero
+         self.__precio = precio
+     def get_nombre(self):
+         return self.__nombre
+     def get_genero(self):
+         return self.__genero
+     def get_precio(self):
+         return self.__precio
+     def set_nombre(self, nombre):
+         self.__nombre = nombre
+     def set_genero(self, genero):
+         self.__genero = genero
+     def set_precio(self, precio):
+         self.__precio = precio
+     def mostrar_informacion(self):
+         print(f"Juego: {self.__nombre} | Género: {self.__genero} | Precio: ${self.__precio}")
+     def esta_en_oferta(self, limite):
+         if self.__precio < limite:
+             print(f"¡'{self.__nombre}' está en oferta!")
+         else:
+             print(f"'{self.__nombre}' no está en oferta.")
+ # -----------------------
+ # Ejemplo con el juego Fortnite
+ # -----------------------
+ fortnite = Juego("Fortnite", "Battle Royale", 5)
+ fortnite.mostrar_informacion()
+ fortnite.esta_en_oferta(10)
