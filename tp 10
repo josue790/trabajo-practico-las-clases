@@ -1,28 +1,10 @@
-~import math
- ~class Circulo:
- ~    def __init__(self, radio):
- ~        if radio >= 0:
- ~            self.__radio = radio
- ~        else:
- ~            raise ValueError("El radio no puede ser negativo.")
- ~    def get_radio(self):
- ~        return self.__radio
- ~    def set_radio(self, radio):
- ~        if radio >= 0:
- ~            self.__radio = radio
- ~        else:
- ~            print("Error: el radio no puede ser negativo.")
- ~    def calcular_area(self):
- ~        return math.pi * (self.__radio ** 2)
- ~    def calcular_circunferencia(self):
- ~        return 2 * math.pi * self.__radio
- ~# -----------------------
- ~# Ejemplo de uso
- ~# -----------------------
- ~
- ~c1 = Circulo(5)
- ~print(f"Radio: {c1.get_radio()}")
- print(f"Área: {c1.calcular_area():.2f}")
- print(f"Circunferencia: {c1.calcular_circunferencia():.2f}")
- c1.set_radio(-3)
- print(f"Radio actualizado: {c1.get_radio()}")
+import math
+class Circulo:
+    def __init__(self, radio):
+        self.__radio = radio if radio >= 0 else 0
+    def get_radio(self): return self.__radio
+    def set_radio(self, radio):
+        if radio >= 0: self.__radio = radio
+        else: print("el radio no puede ser negativo.")
+    def calcular_area(self): return math.pi * self.__radio ** 2
+    def calcular_circunferencia(self): return 2 * math.pi * self.__radio
