@@ -11,4 +11,4 @@ class Juego:
         if self._precio < limite:
             print(self._nombre + " está en oferta!")
         else:
-            print(self._nombre + " no está en oferta.")  
+            print(self._nombre + " no está en oferta.")    
