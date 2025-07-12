@@ -1,14 +1,17 @@
 class Libro:
-     def __init__(self, titulo, autor, año_publicacion):
-         self._titulo = titulo
-         self._autor = autor
-         self._año_publicacion = año_publicacion
-     def descripcion(self):
-         return f"'{self._titulo}' de {self._autor}, publicado en {self._año_publicacion}"
-     def es_clasico(self):
-         año_actual = 2025 
-         return (año_actual - self._año_publicacion) > 50
- if __name__ == "__main__":
-     libro1 = Libro("Cien Años de Soledad", "Gabriel García Márquez", 1967)
-     print(libro1.descripcion())
-     print("¿Es clásico?", libro1.es_clasico())
+    def __init__(self, titulo, autor, año_publicacion):
+        self._titulo = titulo
+        self._autor = autor
+        self._año_publicacion = año_publicacion
+    def descripcion(self):
+        texto = self._titulo
+        texto2 = self._autor
+        texto3 = self._año_publicacion
+        return texto + " escrito por " + texto2 + ", publicado en " + str(texto3)
+    def es_clasico(self):
+        año_actual = 2025
+        diferencia = año_actual - self._año_publicacion
+        if diferencia >= 50:
+            return True
+        else:
+            return False
