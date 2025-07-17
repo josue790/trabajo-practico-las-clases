@@ -1,0 +1,18 @@
+class Empleado:
+    def __init__(self, nombre, salario, departamento):
+        self._nombre = nombre
+        self._salario = salario
+        self._departamento = departamento
+    def mostrar_info(self):
+        print("Nombre:", self._nombre)
+        print("Salario:", self._salario)
+        print("Departamento:", self._departamento)
+    def aumentar_salario(self, porcentaje):
+        self._salario = self._salario + (self._salario * porcentaje / 100)
+    def get_salario(self):
+        return self._salario
+    def set_salario(self, nuevo_salario):
+        if nuevo_salario > 0:
+            self._salario = nuevo_salario
+        else:
+            print("Salario no válido")
